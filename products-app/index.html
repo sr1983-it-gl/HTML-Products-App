@@ -1,0 +1,82 @@
+
+
+<html>
+
+
+  <body>
+
+    <h3>Products Application</h3>
+
+    <table border="2">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Description</th>
+          <th scope="col">Price</th>
+          <th scope="col">Items in Stock</th>
+        </tr>
+      </thead>
+      <tbody id="tableBody">
+                                        
+      </tbody>
+    </table>
+
+  </body>
+
+  <head>
+    <script>
+
+      const data = 
+
+          [
+      {
+        "name": "Sliced lemons",
+        "description": "Heap of whole and sliced lemons",
+        "price": 10,
+        "itemsInStock": "1000"
+      },
+      {
+        "name": "Samsung Universe 9",
+        "description": "Samsung's new variant which goes beyond Galaxy to the Universe",
+        "price": 12345,
+        "itemsInStock": "75"
+      },
+      {
+        "name": "Google Light Pen Yellow",
+        "description": "Get yourself a great multitasking tool",
+        "price": 2323,
+        "itemsInStock": "32"
+      },
+      {
+        "name": "HP Pavilion 15-DK",
+        "description": "HP Pavilion Gaming Laptop 10th Gen",
+        "price": 28289,
+        "itemsInStock": "12"
+      },
+      {
+        "name": "Plant Hanger For Home",
+        "description": "Wall Decoration Macrame Wall Hanging Shelf",
+        "price": 85,
+        "itemsInStock": "18"
+      }
+    ]      
+
+      const tableData = data.map(value => {
+        return (
+          `<tr>
+            <td>${value.name}</td>
+            <td>${value.description}</td>
+            <td>${value.price}</td>
+            <td>${value.itemsInStock}</td>
+          </tr>`
+        );
+      }).join('');
+
+      const tableBody = document.querySelector("#tableBody");
+      tableBody.innerHTML = tableData;
+
+    </script>
+  </head>
+
+</html>
+
